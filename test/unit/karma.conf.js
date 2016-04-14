@@ -38,6 +38,13 @@ webpackConfig.module.loaders.some(function (loader, i) {
   }
 })
 
+// 修复下载如下代码 dev-server正常 unit测试却会报错的问题
+// <stye src="xxx.css"></style>
+webpackConfig.module.loaders.push({
+  test: /\.css$/,
+  loader: 'css'
+})
+
 module.exports = function (config) {
   config.set({
     // to run in additional browsers:
