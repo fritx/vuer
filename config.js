@@ -6,7 +6,8 @@ module.exports = {
     index: path.resolve(__dirname, 'dist/index.html'),
     assetsRoot: path.resolve(__dirname, 'dist'),
     assetsSubDirectory: 'static',
-    assetsPublicPath: '/',
+    // 取消强制根目录的习惯 采用相对路径习惯 便于日常静态访问
+    // assetsPublicPath: '/',
     productionSourceMap: true
   },
   dev: {
