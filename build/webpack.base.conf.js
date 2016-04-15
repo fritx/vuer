@@ -1,4 +1,5 @@
 var path = require('path')
+var NotifierPlugin = require('webpack-notifier')
 var config = require('../config')
 var utils = require('./utils')
 var projectRoot = path.resolve(__dirname, '../')
@@ -24,6 +25,9 @@ module.exports = {
   resolveLoader: {
     fallback: [path.join(__dirname, '../node_modules')]
   },
+  plugins: [
+    new NotifierPlugin({ alwaysNotify: true })
+  ],
   module: {
     preLoaders: [
       {
